@@ -1398,3 +1398,11 @@ Application Verification
 ## Scope of This Lab
 
 The (Demo step stated) ends after successfully demonstrating the Build and YAML deployment flow. **Release Pipelines, Deployment Slots, Blue-Green Deployment, Deployment Quality Gates, and related topics are stated as topics for the next video**, so they are intentionally not included as completed labs here.
+
+
+
+
+
+## 🚀 Next Step (Next Demo Depend on the This Demo [  Azure-DevOps-Build-Deploy-YouTube-Clone-hands-on-labs  ]- link of this Demo - https://github.com/VyankateshwarTaikar/Azure-DevOps-Build-Deploy-YouTube-Clone-hands-on-labs-.git)
+
+👉 **[Continue to Demo 2 →](https://github.com/VyankateshwarTaikar/Azure-DevOps-Release-Pipeline-and-Blue-Green-Deployment-Hands-On-Lab-Guide.git)**
