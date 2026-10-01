@@ -113,7 +113,7 @@ git push -u origin <branch-name>
 
 10. Refresh the repository and verify that the application source code has been uploaded.
 
-==> **Additional Information:** The transcript demonstrates that the existing `origin` initially pointed to GitHub. The remote had to be removed and recreated so that Azure Repos became the destination before pushing the application.
+==> **Additional Information:** The (Demo step stated) demonstrates that the existing `origin` initially pointed to GitHub. The remote had to be removed and recreated so that Azure Repos became the destination before pushing the application.
 
 ---
 
@@ -139,7 +139,7 @@ Select the required Azure subscription.
 
 Create or select a resource group.
 
-The transcript uses:
+The (Demo step stated) uses:
 
 ```text
 day 4 re RG
@@ -149,10 +149,10 @@ day 4 re RG
 
 Provide a globally unique Web App name.
 
-The transcript uses a name similar to:
+The (Demo step stated) uses a name similar to:
 
 ```text
-Tech tutorials with p
+Tech tutorials with Vyankatesh
 ```
 
 The application receives an Azure domain similar to:
@@ -187,7 +187,7 @@ Linux
 
 4. Select the required Azure region.
 
-The transcript uses:
+The (Demo step stated) uses:
 
 ```text
 Canada Central
@@ -197,7 +197,7 @@ Canada Central
 
 6. If required, create a new App Service Plan.
 
-The transcript uses:
+The (Demo step stated) uses:
 
 ```text
 ASP day 4
@@ -207,7 +207,7 @@ ASP day 4
 
 8. Select the pricing tier required for the demonstration.
 
-The transcript uses:
+The (Demo step stated) uses:
 
 ```text
 Premium V3
@@ -402,7 +402,7 @@ The resulting operation executes the equivalent of:
 npm run build
 ```
 
-==> **Additional Information:** The transcript initially describes this as an npm custom command using `run build`. The YAML version later demonstrates the same requirement.
+==> **Additional Information:** The (Demo step stated) initially describes this as an npm custom command using `run build`. The YAML version later demonstrates the same requirement.
 
 ---
 
@@ -467,7 +467,7 @@ Connection Type: Resource Manager
 
 8. Verify that the Azure Service Connection is available in the dropdown.
 
-==> **Additional Information:** The transcript explains that the Service Connection provides the authenticated connection between Azure DevOps and Azure. It can use a Service Principal with appropriate Azure permissions.
+==> **Additional Information:** The (Demo step stated) explains that the Service Connection provides the authenticated connection between Azure DevOps and Azure. It can use a Service Principal with appropriate Azure permissions.
 
 9. Select:
 
@@ -485,7 +485,7 @@ build
 
 12. Configure the required Runtime Stack.
 
-==> **Correction:** The transcript initially selected `Node 18`, but later corrected the deployment configuration to `Static Site` for this application. The demonstrated working configuration uses **Static Site**.
+==> **Correction:** The (Demo step stated) initially selected `Node 18`, but later corrected the deployment configuration to `Static Site` for this application. The demonstrated working configuration uses **Static Site**.
 
 ---
 
@@ -546,7 +546,7 @@ Continuous Integration
 - Build Job Timeout.
 - Build Job Cancel Timeout.
 
-3. The transcript uses a Build Job Timeout example of:
+3. The (Demo step stated) uses a Build Job Timeout example of:
 
 ```text
 60 minutes
@@ -606,7 +606,7 @@ Initialize Job
 
 2. Check the error message.
 
-The transcript reports:
+The (Demo step stated) reports:
 
 ```text
 Not Found: Path to Publish
@@ -644,7 +644,7 @@ Save and Run
 
 10. Verify that the artifact is successfully uploaded.
 
-The transcript reports that the build artifact was uploaded successfully after correcting the path.
+The (Demo step stated) reports that the build artifact was uploaded successfully after correcting the path.
 
 ---
 
@@ -684,7 +684,7 @@ Value: never
 
 8. Save the configuration.
 
-==> **Additional Information:** The transcript uses these settings while troubleshooting the application continuing to display the Azure default page after deployment.
+==> **Additional Information:** The (Demo step stated) uses these settings while troubleshooting the application continuing to display the Azure default page after deployment.
 
 ---
 
@@ -756,7 +756,7 @@ Save and Run
 
 11. Verify that videos are populated and the application is functioning.
 
-==> **Correction:** The transcript explicitly identifies the previous `Node 18` Runtime Stack selection as a mistake and changes it to `Static Site`.
+==> **Correction:** The (Demo step stated) explicitly identifies the previous `Node 18` Runtime Stack selection as a mistake and changes it to `Static Site`.
 
 ---
 
@@ -836,7 +836,7 @@ Download Artifact
 Azure App Service Deployment
 ```
 
-==> **Additional Information:** The transcript explains that a stage can contain multiple jobs, jobs run on agents, and jobs contain steps. Steps can be scripts or tasks.
+==> **Additional Information:** The (Demo step stated) explains that a stage can contain multiple jobs, jobs run on agents, and jobs contain steps. Steps can be scripts or tasks.
 
 ---
 
@@ -848,7 +848,7 @@ Azure App Service Deployment
 
 3. The trigger enables Continuous Integration.
 
-==> **Correction:** The transcript initially entered the trigger incorrectly and received:
+==> **Correction:** The (Demo step stated) initially entered the trigger incorrectly and received:
 
 ```text
 Unexpected value 'main', line one, column ten.
@@ -947,7 +947,7 @@ Custom Command: run build
 
 4. Add the generated task under the Build steps.
 
-==> **Correction:** The transcript initially generated an invalid npm task configuration where `run build` was associated with an unsupported command value. Azure DevOps reported valid values including `custom`; therefore the task must use `custom` with `run build` as the custom command.
+==> **Correction:** The (Demo step stated) initially generated an invalid npm task configuration where `run build` was associated with an unsupported command value. Azure DevOps reported valid values including `custom`; therefore the task must use `custom` with `run build` as the custom command.
 
 ---
 
@@ -1029,7 +1029,7 @@ drop
 
 6. Use the artifact directory or the default working directory.
 
-==> **Additional Information:** The transcript specifically demonstrates that artifacts published in one stage are not automatically available to another stage. Therefore, the Deploy stage must download the artifact before deployment.
+==> **Additional Information:** The (Demo step stated) specifically demonstrates that artifacts published in one stage are not automatically available to another stage. Therefore, the Deploy stage must download the artifact before deployment.
 
 ---
 
@@ -1063,7 +1063,7 @@ Web App on Linux
 
 7. Configure the package/folder as the generated build directory.
 
-The transcript initially uses:
+The (Demo step stated) initially uses:
 
 ```text
 build
@@ -1087,7 +1087,7 @@ build
 Static
 ```
 
-==> **Correction:** The transcript explicitly corrects the package path to **System Default Working Directory + build** and uses the Static runtime configuration for the demonstrated application.
+==> **Correction:** The (Demo step stated) explicitly corrects the package path to **System Default Working Directory + build** and uses the Static runtime configuration for the demonstrated application.
 
 ---
 
@@ -1202,7 +1202,7 @@ completes successfully.
 
 13. Verify that the **YouTube Clone application** is running.
 
-The transcript's final verification confirms that the Build stage published an artifact, the Deploy stage downloaded it, and the application URL was working successfully.
+The (Demo step stated)'s final verification confirms that the Build stage published an artifact, the Deploy stage downloaded it, and the application URL was working successfully.
 
 ---
 
@@ -1236,7 +1236,7 @@ Not Found: Path to Publish
 Path to Publish: build
 ```
 
-The transcript demonstrates that changing the path to `build` resolves the artifact publishing failure.
+The (Demo step stated) demonstrates that changing the path to `build` resolves the artifact publishing failure.
 
 ---
 
@@ -1353,7 +1353,7 @@ Then deploy from the downloaded artifact directory.
 
 4. Verify that the associated resources have been removed.
 
-==> **Additional Information:** The transcript explicitly recommends cleaning up the Resource Group after the lab to avoid unnecessary Azure costs.
+==> **Additional Information:** The (Demo step stated) explicitly recommends cleaning up the Resource Group after the lab to avoid unnecessary Azure costs.
 
 ---
 
@@ -1397,4 +1397,4 @@ Application Verification
 
 ## Scope of This Lab
 
-The transcript ends after successfully demonstrating the Build and YAML deployment flow. **Release Pipelines, Deployment Slots, Blue-Green Deployment, Deployment Quality Gates, and related topics are stated as topics for the next video**, so they are intentionally not included as completed labs here.
+The (Demo step stated) ends after successfully demonstrating the Build and YAML deployment flow. **Release Pipelines, Deployment Slots, Blue-Green Deployment, Deployment Quality Gates, and related topics are stated as topics for the next video**, so they are intentionally not included as completed labs here.
