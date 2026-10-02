@@ -13,7 +13,99 @@ Production-oriented Azure DevOps CI/CD hands-on labs covering Classic Pipelines,
 
 **Demo 3 ==> YAML-Based Azure DevOps CI/CD Pipeline**
 
----
+------- Before moving setup Infra
+
+## Before moving to Demo - Steps to set the infrastructure
+- Login to VSCode or any other IDE of your choice
+- Run the below commands to download the application code
+  ```
+  mkdir day4_youtube_clone; cd day4_youtube_clone
+  git init
+  git clone https://github.com/piyushsachdeva/Youtube_Clone
+  ```
+- Create a project in Azure DevOps for Day4 and push the code by running the below commands on VSCode:
+  ```
+  git remote add origin $YOURAZUREREPO
+  git push -u origin all
+  ```
+  Note: Make sure to update your Azure repo in the above command
+- Go to the Azure Portal and Create the Azure App Service by following the instructions in the video
+
+- Implement the build pipeline using the classic editor
+
+- Understand the use of service connection and service principal
+
+<img width="1008" height="444" alt="image" src="https://github.com/user-attachments/assets/97fe74a3-20eb-4bea-894f-d5f54539b4cc" />
+
+
+**Note: You must set the app settings WEBSITE_DYNAMIC_CACHE=0 and WEBSITE_LOCAL_CACHE_OPTION=Never to disable all file caching**
+
+## Structure of Azure DevOps build Pipeline
+
+<img width="727" height="441" alt="image" src="https://github.com/user-attachments/assets/4e319794-e2ff-47ea-9202-3c471e0da1fa" />
+
+
+*  A trigger tells a Pipeline to run. It could be CI or Scheduled, manual(if not specified), or after another build finishes.
+*  A pipeline is made up of one or more stages. A pipeline can deploy to one or more environments.
+*  A stage organizes jobs in a pipeline, and each stage can have one or more jobs.
+*  Each job runs on one agent, such as Ubuntu, Windows, macOS, etc. A job can also be agentless.
+*  Each agent runs a job that contains one or more steps.
+*  A step can be a task or script and is the smallest building block of a pipeline.
+*  A task is a pre-packaged script that performs an action, such as invoking a REST API or publishing a build artifact.
+*  An artifact is a collection of files or packages published by a run.
+
+<img width="1030" height="390" alt="image" src="https://github.com/user-attachments/assets/b9402b03-758e-4c48-b2a8-abc9f496bc2c" />
+
+
+## Pipeline code used in the demo (Keep this as same as for demo)
+
+``` YAML
+trigger:
+- main
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: Npm@1
+      inputs:
+        command: 'install'
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'run build'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'build'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+- stage: Deploy
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: DownloadBuildArtifacts@1
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'drop'
+        downloadPath: '$(System.ArtifactsDirectory)'
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Tech Tutorials With Piyush (9e9c27ce-e0c8-4171-a368-ad16977ec849)'
+        appType: 'webAppLinux'
+        WebAppName: 'TechTutorialsWithPiyush'
+        packageForLinux: '$(System.ArtifactsDirectory)/drop'
+        RuntimeStack: 'STATICSITE|1.0'
+```
+
+
+================================ ===================== =================== ===================== ==================
 
 # MAIN DEMO: YouTube Clone Repository Setup & Azure App Service Provisioning
 
