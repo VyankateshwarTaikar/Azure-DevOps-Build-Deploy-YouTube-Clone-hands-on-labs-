@@ -57,7 +57,7 @@ Production-oriented Azure DevOps CI/CD hands-on labs covering Classic Pipelines,
 <img width="1030" height="390" alt="image" src="https://github.com/user-attachments/assets/b9402b03-758e-4c48-b2a8-abc9f496bc2c" />
 
 
-## Pipeline code used in the demo (Keep this as same as for demo)
+## Pipeline code used in the demo (Change as per the User Specific Name)
 
 ``` YAML
 trigger:
@@ -97,9 +97,9 @@ stages:
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
-        azureSubscription: 'Tech Tutorials With Piyush (9e9c27ce-e0c8-4171-a368-ad16977ec849)'
+        azureSubscription: 'Account_Name (Account_ID)'
         appType: 'webAppLinux'
-        WebAppName: 'TechTutorialsWithPiyush'
+        WebAppName: '(Web App Name )'
         packageForLinux: '$(System.ArtifactsDirectory)/drop'
         RuntimeStack: 'STATICSITE|1.0'
 ```
