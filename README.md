@@ -299,14 +299,16 @@ ASP day 4
 <img width="767" height="1240" alt="image" src="https://github.com/user-attachments/assets/482431f2-b942-4457-a80c-d08921d71aba" />
 
 7. Open **Explore pricing plans**.
+<img width="767" height="1240" alt="image" src="https://github.com/user-attachments/assets/3766a3dc-36b0-436e-bac6-091df56f4b0e" />
 
 8. Select the pricing tier required for the demonstration.
 
 The (Demo step stated) uses:
 
 ```text
-Premium V3
+Premium V4
 ```
+<img width="1365" height="650" alt="image" src="https://github.com/user-attachments/assets/59300926-b312-4ed9-9562-90630dc36279" />
 
 9. Keep **Zone redundancy** disabled for this demonstration.
 
@@ -319,18 +321,21 @@ Premium V3
 13. Keep continuous deployment disabled because Azure DevOps will be configured separately.
 
 14. Select **Next: Networking**.
+<img width="831" height="609" alt="image" src="https://github.com/user-attachments/assets/290962a1-cafb-45f5-ac6e-18207b5ddca3" />
 
 15. Keep **Public Access** enabled.
 
 16. Continue to **Monitoring**.
 
 17. Keep Application Insights disabled for this demonstration.
-
+<img width="695" height="604" alt="image" src="https://github.com/user-attachments/assets/9323b9b3-cd75-4be8-a4fd-7b631f3b378b" />
 18. Continue to **Tags**.
 
 19. Select **Review + create**.
+<img width="766" height="1246" alt="image" src="https://github.com/user-attachments/assets/2ffad5a8-8c04-4dd1-9b9e-611297e539f3" />
 
 20. Wait for validation to complete.
+<img width="681" height="602" alt="image" src="https://github.com/user-attachments/assets/8fc8a3f3-ebd9-43f4-9d1d-aee5d68b5e5e" />
 
 21. Select **Create**.
 
