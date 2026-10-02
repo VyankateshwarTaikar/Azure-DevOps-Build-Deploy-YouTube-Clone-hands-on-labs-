@@ -159,7 +159,8 @@ https://dev.azure.com
 YouTube Clone
 ```
 
-4. Create the project.
+4. Create the project. (By selecting Private)
+<img width="1365" height="646" alt="image" src="https://github.com/user-attachments/assets/5e9a5749-9751-4360-80d5-ea2873355ad8" />
 
 5. Open **Repos**.
 
@@ -189,7 +190,7 @@ git remote -v
 git remote remove origin
 ```
 
-7. Add the Azure Repos URL as the new `origin`:
+7. Add the Azure Repos URL as the new `origin`:   (Remember - We require the Azure repo origin NOT the Github Origin )
 
 ```bash
 git remote add origin <Azure-Repos-URL>
@@ -200,6 +201,7 @@ git remote add origin <Azure-Repos-URL>
 ```bash
 git push -u origin <branch-name>
 ```
+<img width="1365" height="647" alt="image" src="https://github.com/user-attachments/assets/d83d8946-b63c-4716-b84a-4008dc3ede82" />
 
 9. Return to **Azure DevOps → Repos**.
 
@@ -234,7 +236,7 @@ Create or select a resource group.
 The (Demo step stated) uses:
 
 ```text
-day 4 re RG
+Wed_Rg
 ```
 
 ### Web App Name
@@ -244,7 +246,7 @@ Provide a globally unique Web App name.
 The (Demo step stated) uses a name similar to:
 
 ```text
-Tech tutorials with Vyankatesh
+VyankYouTubeClone
 ```
 
 The application receives an Azure domain similar to:
@@ -294,6 +296,7 @@ The (Demo step stated) uses:
 ```text
 ASP day 4
 ```
+<img width="767" height="1240" alt="image" src="https://github.com/user-attachments/assets/482431f2-b942-4457-a80c-d08921d71aba" />
 
 7. Open **Explore pricing plans**.
 
