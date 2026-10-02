@@ -29,7 +29,7 @@ Production-oriented Azure DevOps CI/CD hands-on labs covering Classic Pipelines,
   git push -u origin all
   ```
   Note: Make sure to update your Azure repo in the above command
-- Go to the Azure Portal and Create the Azure App Service by following the instructions in the video
+- Go to the Azure Portal and Create the Azure App Service by following Steps : 
 
 - Implement the build pipeline using the classic editor
 
