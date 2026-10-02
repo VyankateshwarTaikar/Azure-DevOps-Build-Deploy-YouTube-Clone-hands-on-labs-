@@ -25,7 +25,7 @@ Production-oriented Azure DevOps CI/CD hands-on labs covering Classic Pipelines,
   ```
 - Create a project in Azure DevOps for Day4 and push the code by running the below commands on VSCode:
   ```
-  git remote add origin $YOURAZUREREPO
+  git remote add origin "URL-YOURAZUREREPO"
   git push -u origin all
   ```
   Note: Make sure to update your Azure repo in the above command
