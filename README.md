@@ -584,6 +584,7 @@ App Service Type: Web App on Linux
 ```text
 build
 ```
+<img width="1364" height="644" alt="image" src="https://github.com/user-attachments/assets/1b7a97bf-d7dc-4b34-bb8a-41321b57b7fe" />
 
 12. Configure the required Runtime Stack.
 
