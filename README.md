@@ -465,6 +465,7 @@ Command: install
 5. Keep the **Working Folder** blank because `package.json` is located in the root directory.
 
 6. Save the task configuration.
+<img width="767" height="1241" alt="image" src="https://github.com/user-attachments/assets/492a1ebc-d98c-4eff-b836-0aa888e7fe80" />
 
 The task will execute:
 
